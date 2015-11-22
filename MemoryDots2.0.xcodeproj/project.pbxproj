@@ -13,6 +13,8 @@
 		853D87471C0181790009720F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853D87461C0181790009720F /* Images.xcassets */; };
 		853D874A1C0181790009720F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853D87481C0181790009720F /* LaunchScreen.xib */; };
 		853D87561C0181790009720F /* MemoryDots2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87551C0181790009720F /* MemoryDots2_0Tests.swift */; };
+		853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D875F1C01818D0009720F /* AllDotsViewController.swift */; };
+		853D87621C01818D0009720F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87601C01818D0009720F /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		853D874F1C0181790009720F /* MemoryDots2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryDots2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853D87541C0181790009720F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853D87551C0181790009720F /* MemoryDots2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDots2_0Tests.swift; sourceTree = "<group>"; };
+		853D875F1C01818D0009720F /* AllDotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDotsViewController.swift; sourceTree = "<group>"; };
+		853D87601C01818D0009720F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				853D873F1C0181790009720F /* AppDelegate.swift */,
 				853D87411C0181790009720F /* ViewController.swift */,
+				853D875F1C01818D0009720F /* AllDotsViewController.swift */,
+				853D87601C01818D0009720F /* MapViewController.swift */,
 				853D87431C0181790009720F /* Main.storyboard */,
 				853D87461C0181790009720F /* Images.xcassets */,
 				853D87481C0181790009720F /* LaunchScreen.xib */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */,
 				853D87421C0181790009720F /* ViewController.swift in Sources */,
 				853D87401C0181790009720F /* AppDelegate.swift in Sources */,
+				853D87621C01818D0009720F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

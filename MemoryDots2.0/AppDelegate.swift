@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        let tabBarController = UITabBarController()
+        let navigationController = UINavigationController(rootViewController: AllDotsViewController())
+        navigationController.title = "MemoryDots"
+        
+        let mapNavigationController = UINavigationController(rootViewController: MapViewController())
+        mapNavigationController.title = "Map"
+        
+        tabBarController.viewControllers = [navigationController, mapNavigationController]
+        
+        window?.rootViewController = tabBarController
+        
         return true
     }
 
