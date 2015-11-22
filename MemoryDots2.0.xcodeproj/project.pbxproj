@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27355BA0B1F6881C0F055C5C /* Pods_MemoryDots2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F90F812971DC0E4A762FC39 /* Pods_MemoryDots2_0.framework */; };
 		853D87401C0181790009720F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D873F1C0181790009720F /* AppDelegate.swift */; };
 		853D87421C0181790009720F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87411C0181790009720F /* ViewController.swift */; };
 		853D87451C0181790009720F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853D87431C0181790009720F /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F90F812971DC0E4A762FC39 /* Pods_MemoryDots2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryDots2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29928968E13F3846CF01C356 /* Pods-MemoryDots2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryDots2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryDots2.0/Pods-MemoryDots2.0.release.xcconfig"; sourceTree = "<group>"; };
+		7F71C3102E2A787CD9D97706 /* Pods-MemoryDots2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryDots2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryDots2.0/Pods-MemoryDots2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		853D873A1C0181790009720F /* MemoryDots2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryDots2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853D873E1C0181790009720F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853D873F1C0181790009720F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27355BA0B1F6881C0F055C5C /* Pods_MemoryDots2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0F7357FE8762C6C5D6A07D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F71C3102E2A787CD9D97706 /* Pods-MemoryDots2.0.debug.xcconfig */,
+				29928968E13F3846CF01C356 /* Pods-MemoryDots2.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		853D87311C0181790009720F = {
 			isa = PBXGroup;
 			children = (
 				853D873C1C0181790009720F /* MemoryDots2.0 */,
 				853D87521C0181790009720F /* MemoryDots2.0Tests */,
 				853D873B1C0181790009720F /* Products */,
+				0B0F7357FE8762C6C5D6A07D /* Pods */,
+				F91924CE580AE3984C465A5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +134,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F91924CE580AE3984C465A5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F90F812971DC0E4A762FC39 /* Pods_MemoryDots2_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 853D87591C01817A0009720F /* Build configuration list for PBXNativeTarget "MemoryDots2.0" */;
 			buildPhases = (
+				517B99B8A64D468105DFEEAC /* Check Pods Manifest.lock */,
 				853D87361C0181790009720F /* Sources */,
 				853D87371C0181790009720F /* Frameworks */,
 				853D87381C0181790009720F /* Resources */,
+				602522DD785058A33C86D9FB /* Embed Pods Frameworks */,
+				B145DA32F51EFEB3C98624D4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +239,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		517B99B8A64D468105DFEEAC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		602522DD785058A33C86D9FB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoryDots2.0/Pods-MemoryDots2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B145DA32F51EFEB3C98624D4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoryDots2.0/Pods-MemoryDots2.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		853D87361C0181790009720F /* Sources */ = {
@@ -346,6 +421,7 @@
 		};
 		853D875A1C01817A0009720F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F71C3102E2A787CD9D97706 /* Pods-MemoryDots2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MemoryDots2.0/Info.plist;
@@ -356,6 +432,7 @@
 		};
 		853D875B1C01817A0009720F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29928968E13F3846CF01C356 /* Pods-MemoryDots2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MemoryDots2.0/Info.plist;
@@ -417,6 +494,7 @@
 				853D875B1C01817A0009720F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		853D875C1C01817A0009720F /* Build configuration list for PBXNativeTarget "MemoryDots2.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +503,7 @@
 				853D875E1C01817A0009720F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
