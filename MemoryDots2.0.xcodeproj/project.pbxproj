@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27355BA0B1F6881C0F055C5C /* Pods_MemoryDots2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F90F812971DC0E4A762FC39 /* Pods_MemoryDots2_0.framework */; };
 		853D87401C0181790009720F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D873F1C0181790009720F /* AppDelegate.swift */; };
-		853D87421C0181790009720F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87411C0181790009720F /* ViewController.swift */; };
 		853D87451C0181790009720F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853D87431C0181790009720F /* Main.storyboard */; };
 		853D87471C0181790009720F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853D87461C0181790009720F /* Images.xcassets */; };
 		853D874A1C0181790009720F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853D87481C0181790009720F /* LaunchScreen.xib */; };
@@ -35,7 +34,6 @@
 		853D873A1C0181790009720F /* MemoryDots2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryDots2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853D873E1C0181790009720F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853D873F1C0181790009720F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		853D87411C0181790009720F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		853D87441C0181790009720F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		853D87461C0181790009720F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		853D87491C0181790009720F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -98,12 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				853D873F1C0181790009720F /* AppDelegate.swift */,
-				853D87411C0181790009720F /* ViewController.swift */,
-				853D875F1C01818D0009720F /* AllDotsViewController.swift */,
-				853D87601C01818D0009720F /* MapViewController.swift */,
-				853D87431C0181790009720F /* Main.storyboard */,
-				853D87461C0181790009720F /* Images.xcassets */,
-				853D87481C0181790009720F /* LaunchScreen.xib */,
+				853D87631C0184370009720F /* Controller */,
 				853D873D1C0181790009720F /* Supporting Files */,
 			);
 			path = MemoryDots2.0;
@@ -112,6 +105,9 @@
 		853D873D1C0181790009720F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				853D87431C0181790009720F /* Main.storyboard */,
+				853D87461C0181790009720F /* Images.xcassets */,
+				853D87481C0181790009720F /* LaunchScreen.xib */,
 				853D873E1C0181790009720F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -132,6 +128,15 @@
 				853D87541C0181790009720F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853D87631C0184370009720F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				853D875F1C01818D0009720F /* AllDotsViewController.swift */,
+				853D87601C01818D0009720F /* MapViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		F91924CE580AE3984C465A5E /* Frameworks */ = {
@@ -294,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */,
-				853D87421C0181790009720F /* ViewController.swift in Sources */,
 				853D87401C0181790009720F /* AppDelegate.swift in Sources */,
 				853D87621C01818D0009720F /* MapViewController.swift in Sources */,
 			);
