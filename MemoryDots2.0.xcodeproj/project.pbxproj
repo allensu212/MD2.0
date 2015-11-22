@@ -15,6 +15,8 @@
 		853D87561C0181790009720F /* MemoryDots2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87551C0181790009720F /* MemoryDots2_0Tests.swift */; };
 		853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D875F1C01818D0009720F /* AllDotsViewController.swift */; };
 		853D87621C01818D0009720F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87601C01818D0009720F /* MapViewController.swift */; };
+		853D87651C01849E0009720F /* AllDotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87641C01849E0009720F /* AllDotsTableViewCell.swift */; };
+		853D87681C0184C00009720F /* MemoryDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87671C0184C00009720F /* MemoryDot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		853D87551C0181790009720F /* MemoryDots2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDots2_0Tests.swift; sourceTree = "<group>"; };
 		853D875F1C01818D0009720F /* AllDotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDotsViewController.swift; sourceTree = "<group>"; };
 		853D87601C01818D0009720F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		853D87641C01849E0009720F /* AllDotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDotsTableViewCell.swift; sourceTree = "<group>"; };
+		853D87671C0184C00009720F /* MemoryDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				853D873F1C0181790009720F /* AppDelegate.swift */,
+				853D87691C0184C60009720F /* Model */,
+				853D87661C0184A30009720F /* View */,
 				853D87631C0184370009720F /* Controller */,
 				853D873D1C0181790009720F /* Supporting Files */,
 			);
@@ -137,6 +143,22 @@
 				853D87601C01818D0009720F /* MapViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		853D87661C0184A30009720F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				853D87641C01849E0009720F /* AllDotsTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		853D87691C0184C60009720F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				853D87671C0184C00009720F /* MemoryDot.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F91924CE580AE3984C465A5E /* Frameworks */ = {
@@ -301,6 +323,8 @@
 				853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */,
 				853D87401C0181790009720F /* AppDelegate.swift in Sources */,
 				853D87621C01818D0009720F /* MapViewController.swift in Sources */,
+				853D87681C0184C00009720F /* MemoryDot.swift in Sources */,
+				853D87651C01849E0009720F /* AllDotsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
