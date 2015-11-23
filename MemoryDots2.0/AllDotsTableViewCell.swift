@@ -22,7 +22,7 @@ class AllDotsTableViewCell: UITableViewCell {
     // MARK: Initializer
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
+        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
     
@@ -33,10 +33,21 @@ class AllDotsTableViewCell: UITableViewCell {
     // MARK: UISetup
     
     func setupUI(){
+        
+        photoImageView = UIImageView()
+        photoImageView.image = UIImage(named: "nyc")
+        photoImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        photoImageView.clipsToBounds = true
+        contentView.addSubview(photoImageView)
+        
         self.setNeedsUpdateConstraints()
         self.updateConstraintsIfNeeded()
         textLabel?.numberOfLines = 0
         textLabel?.font = CustomAppearance().tableViewTextLabelFont
+        textLabel?.textColor = CustomAppearance().whiteColor
+        
+        photoImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        textLabel!.setTranslatesAutoresizingMaskIntoConstraints(false)
     }
     
     func configureCell(text: String){
@@ -48,7 +59,8 @@ class AllDotsTableViewCell: UITableViewCell {
     override func updateConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true;
-            textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, kPaddingBottom, kPaddingRight))
+            photoImageView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, kPaddingBottom, kPaddingRight))
+            textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft + 8.0, kPaddingBottom, kPaddingRight + 8.0))
         }
         super.updateConstraints()
     }
