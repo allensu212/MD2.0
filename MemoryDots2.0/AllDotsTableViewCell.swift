@@ -11,12 +11,13 @@ import PureLayout
 
 let kPaddingTop:CGFloat = 10.0
 let kPaddingBottom:CGFloat = 10.0
-let kPaddingLeft:CGFloat = 15.0
-let kPaddingRight:CGFloat = 15.0
+let kPaddingLeft:CGFloat = 10.0
+let kPaddingRight:CGFloat = 10.0
 
 class AllDotsTableViewCell: UITableViewCell {
     
     var didSetupConstraints = false
+    var photoImageView: UIImageView!
 
     // MARK: Initializer
     
@@ -24,21 +25,31 @@ class AllDotsTableViewCell: UITableViewCell {
         super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
         self.setNeedsUpdateConstraints()
         self.updateConstraintsIfNeeded()
+        textLabel?.numberOfLines = 0
+        detailTextLabel?.numberOfLines = 0
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    // MARK: UISetup
+    
+    func configureCell(text: String){
+        
+        textLabel?.text = text
+        
+
+    }
+    
+    // MARK: PureLayout
+    
     override func updateConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true;
-            
             textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, 0, kPaddingRight), excludingEdge: ALEdge.Bottom)
-            
             detailTextLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(0, kPaddingLeft, kPaddingBottom, kPaddingRight), excludingEdge: ALEdge.Top)
             detailTextLabel?.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Bottom, ofView: textLabel!, withOffset: 0.0)
-            
         }
         super.updateConstraints()
     }

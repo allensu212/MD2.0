@@ -50,7 +50,7 @@ extension AllDotsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let allDotsCell = tableView.dequeueReusableCellWithIdentifier(allDotsTableViewCellIdentifier) as! AllDotsTableViewCell
-        allDotsCell.textLabel?.text = "testing a very long text to see how far it could go..."
+        allDotsCell.configureCell("testing a very long text to see how far it could go...testing a very long text to see how far it could go...testing a very long text to see how far it could go...")
         return allDotsCell
     }
     
