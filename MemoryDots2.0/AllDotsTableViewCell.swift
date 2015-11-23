@@ -23,10 +23,7 @@ class AllDotsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
-        self.setNeedsUpdateConstraints()
-        self.updateConstraintsIfNeeded()
-        textLabel?.numberOfLines = 0
-        detailTextLabel?.numberOfLines = 0
+        setupUI()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -35,11 +32,15 @@ class AllDotsTableViewCell: UITableViewCell {
     
     // MARK: UISetup
     
+    func setupUI(){
+        self.setNeedsUpdateConstraints()
+        self.updateConstraintsIfNeeded()
+        textLabel?.numberOfLines = 0
+        textLabel?.font = CustomAppearance().tableViewTextLabelFont
+    }
+    
     func configureCell(text: String){
-        
         textLabel?.text = text
-        
-
     }
     
     // MARK: PureLayout
@@ -47,9 +48,7 @@ class AllDotsTableViewCell: UITableViewCell {
     override func updateConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true;
-            textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, 0, kPaddingRight), excludingEdge: ALEdge.Bottom)
-            detailTextLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(0, kPaddingLeft, kPaddingBottom, kPaddingRight), excludingEdge: ALEdge.Top)
-            detailTextLabel?.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Bottom, ofView: textLabel!, withOffset: 0.0)
+            textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, kPaddingBottom, kPaddingRight))
         }
         super.updateConstraints()
     }
