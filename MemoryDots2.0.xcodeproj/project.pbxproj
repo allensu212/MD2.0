@@ -17,6 +17,7 @@
 		853D87621C01818D0009720F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87601C01818D0009720F /* MapViewController.swift */; };
 		853D87651C01849E0009720F /* AllDotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87641C01849E0009720F /* AllDotsTableViewCell.swift */; };
 		853D87681C0184C00009720F /* MemoryDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D87671C0184C00009720F /* MemoryDot.swift */; };
+		855422D01C02CAE000255E4C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855422CF1C02CAE000255E4C /* ProfileViewController.swift */; };
 		85ADB5C71C02A41F0027BC2D /* CustomAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADB5C61C02A41F0027BC2D /* CustomAppearance.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		853D87601C01818D0009720F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		853D87641C01849E0009720F /* AllDotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDotsTableViewCell.swift; sourceTree = "<group>"; };
 		853D87671C0184C00009720F /* MemoryDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDot.swift; sourceTree = "<group>"; };
+		855422CF1C02CAE000255E4C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		85ADB5C61C02A41F0027BC2D /* CustomAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 			children = (
 				853D875F1C01818D0009720F /* AllDotsViewController.swift */,
 				853D87601C01818D0009720F /* MapViewController.swift */,
+				855422CF1C02CAE000255E4C /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				853D87611C01818D0009720F /* AllDotsViewController.swift in Sources */,
 				853D87401C0181790009720F /* AppDelegate.swift in Sources */,
 				853D87621C01818D0009720F /* MapViewController.swift in Sources */,
+				855422D01C02CAE000255E4C /* ProfileViewController.swift in Sources */,
 				853D87681C0184C00009720F /* MemoryDot.swift in Sources */,
 				853D87651C01849E0009720F /* AllDotsTableViewCell.swift in Sources */,
 			);

@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
         let tabBarController = UITabBarController()
         let navigationController = UINavigationController(rootViewController: AllDotsViewController())
         navigationController.title = "MemoryDots"
@@ -24,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mapNavigationController = UINavigationController(rootViewController: MapViewController())
         mapNavigationController.title = "Map"
         
-        tabBarController.viewControllers = [navigationController, mapNavigationController]
+        let profileNavigationController = UINavigationController(rootViewController: ProfileViewController())
+        profileNavigationController.title = "Profile"
+        
+        tabBarController.viewControllers = [navigationController, mapNavigationController, profileNavigationController]
         
         window?.rootViewController = tabBarController
         
