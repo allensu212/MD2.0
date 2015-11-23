@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MapKit
+import PureLayout
 
 class MapViewController: UIViewController {
+    
+    var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,10 @@ class MapViewController: UIViewController {
     func setupUI(){
         navigationItem.title = "Map"
         view.backgroundColor = UIColor.whiteColor()
+        
+        mapView = MKMapView()
+        view.addSubview(mapView)
+        mapView.autoPinEdgesToSuperviewEdges()
     }
 
 }
