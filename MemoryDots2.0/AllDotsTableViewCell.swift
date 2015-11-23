@@ -59,7 +59,7 @@ class AllDotsTableViewCell: UITableViewCell {
     override func updateConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true;
-            photoImageView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft, kPaddingBottom, kPaddingRight))
+            photoImageView.autoPinEdgesToSuperviewEdges()
             textLabel!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(kPaddingTop, kPaddingLeft + 8.0, kPaddingBottom, kPaddingRight + 8.0))
         }
         super.updateConstraints()
